@@ -73,8 +73,8 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 
 3. Look for `"chat":{"id":12345678...}`
 
-📷 **Insert screenshot of getUpdates response (user)**  
-👉 `📸 getupdates-user.png`
+<img width="862" alt="111" src="https://github.com/user-attachments/assets/3e698d77-1e84-4ce0-849c-cfef473c535a" />
+
 
 ### 🔸 Get Group Chat ID
 
@@ -88,8 +88,8 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 
 > Group IDs look like: `-100xxxxxxxxxx`
 
-📷 **Insert screenshot of getUpdates response (group)**  
-👉 `📸 getupdates-group.png`
+
+<img width="864" alt="111" src="https://github.com/user-attachments/assets/8663ad50-373e-456a-9673-149db9a53540" />
 
 ---
 
@@ -103,8 +103,8 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
    - 🆔 Chat ID
    - 💬 Message
 
-📷 **Insert screenshot of Directus Flow setup**
-👉 `📸 directus-flow-usage.png`
+
+<img width="619" alt="111" src="https://github.com/user-attachments/assets/b546091a-7c6c-447f-bd1b-e73f091344cf" />
 
 ---
 
@@ -142,7 +142,6 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 
 ```
 extensions/
-└── operations/
     └── send-telegram-message/
         ├── api.js
         ├── app.js
