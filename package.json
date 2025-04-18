@@ -2,12 +2,17 @@
   "name": "directus-extension-telegram-message-operation",
   "description": "Custom operation for sending Telegram Messages",
   "icon": "extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "directus",
-    "directus-extension",
-    "directus-extension-operation"
+    "directus-extension-telegram-message-operation",
+    "directus-extension-operation",
+    "directus-telegram"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Uncw3b-Software/directus-extension-telegram-message-operation"
+  },
   "type": "module",
   "files": [
     "dist"
@@ -17,6 +22,20 @@
     "path": {
       "app": "dist/app.js",
       "api": "dist/api.js"
+    },
+    "sandbox": {
+      "enabled": true,
+      "requestedScopes": {
+        "request": {
+          "methods": [
+            "POST"
+          ],
+          "urls": [
+            "https://api.telegram.org/*"
+          ]
+        },
+        "log": {}
+      }
     },
     "source": {
       "app": "src/app.js",

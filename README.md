@@ -56,6 +56,7 @@ npx directus start
 ```
 123456789:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
 ```
+
 <img width="521" alt="111" src="https://github.com/user-attachments/assets/5e0b728c-09f5-4c3e-97f7-e45edce4feef" />
 
 ---
@@ -75,7 +76,6 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 
 <img width="862" alt="111" src="https://github.com/user-attachments/assets/3e698d77-1e84-4ce0-849c-cfef473c535a" />
 
-
 ### 🔸 Get Group Chat ID
 
 1. Add your bot to a group
@@ -87,7 +87,6 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 ```
 
 > Group IDs look like: `-100xxxxxxxxxx`
-
 
 <img width="864" alt="111" src="https://github.com/user-attachments/assets/8663ad50-373e-456a-9673-149db9a53540" />
 
@@ -102,7 +101,6 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
    - 🔐 Bot Token
    - 🆔 Chat ID
    - 💬 Message
-
 
 <img width="619" alt="111" src="https://github.com/user-attachments/assets/b546091a-7c6c-447f-bd1b-e73f091344cf" />
 

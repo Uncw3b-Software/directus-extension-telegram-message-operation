@@ -1,29 +1,35 @@
-import axios from "axios";
+import { request, log } from "directus:api";
 
 export default {
   id: "send-telegram-message",
   handler: async ({ bot_token, chat_id, message }) => {
     if (!bot_token || !chat_id || !message) {
-      throw new Error("Bot token, chat ID and message are required.");
+      throw new Error("Bot token, chat ID, and message are required.");
     }
 
-    const url = `https://api.telegram.org/bot${bot_token}/sendMessage`;
-
     try {
-      await axios.post(url, {
-        chat_id,
-        text: message,
-      });
+      const res = await request(
+        `https://api.telegram.org/bot${bot_token}/sendMessage`,
+        {
+          method: "POST",
+          body: {
+            chat_id,
+            text: message,
+          },
+        }
+      );
+
+      log(`Message sent to ${chat_id}: ${message}`);
 
       return {
         status: "success",
-        sent_to: chat_id,
-        message,
+        response: res,
       };
     } catch (error) {
+      log(`Error sending message: ${error.message}`);
       return {
         status: "error",
-        error: error.response?.data?.description || error.message,
+        error: error.message,
       };
     }
   },
