@@ -29,9 +29,17 @@ Developed by [UNCW3B Software](https://uncw3b.com) — your partner in custom dA
 ## 🛠️ Installation
 
 ```bash
+npm install directus-extension-telegram-message-operation
+```
+
+or
+
+```bash
 npx create-directus-extension
 # Or clone this repo into /extensions/directus-extension-telegram-message-operation
 ```
+
+
 
 Make sure your `.env` includes:
 
