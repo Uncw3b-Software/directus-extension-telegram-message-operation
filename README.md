@@ -1,0 +1,166 @@
+# 📩 Directus Telegram Message Sender (Flow Operation)
+
+Send messages to any Telegram user or group using this custom operation inside your **Directus Flows**.
+
+Developed by [UNCW3B Software](https://uncw3b.com) — your partner in custom dApps, AI SaaS, and web automation solutions.
+
+---
+
+## 🚀 Features
+
+- 📡 Send messages to Telegram users or groups
+- 🔧 Flow-friendly configuration (Bot Token, Chat ID, Message)
+- 🧩 Fully compatible with Directus Flows
+- 👨‍💻 No coding knowledge required
+
+---
+
+## 🧠 How It Works
+
+1. This extension adds a new **Flow Operation** inside Directus called `Send Telegram Message`.
+2. In your flow, you configure:
+   - **Your Telegram Bot Token**
+   - **Target Chat ID or Group ID**
+   - **The Message Content**
+3. When the flow is triggered, your message will be sent via Telegram Bot API.
+
+---
+
+## 🛠️ Installation
+
+```bash
+npx create-directus-extension
+# Or clone this repo into /extensions/operations/send-telegram-message
+```
+
+Make sure your `.env` includes:
+
+```env
+EXTENSIONS_PATH=./extensions
+```
+
+Then restart Directus:
+
+```bash
+npx directus start
+```
+
+---
+
+## 🔐 Create Your Telegram Bot
+
+1. Open Telegram and search for **@BotFather**
+2. Type `/newbot` and follow the instructions
+3. After naming your bot, you'll receive a **Bot Token** like:
+
+```
+123456789:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+```
+
+📷 **Insert screenshot of @BotFather conversation**  
+👉 `📸 botfather-create.png`
+
+---
+
+## 👥 How to Find Chat ID or Group ID
+
+### 🔸 Get Personal Chat ID
+
+1. Start a conversation with your bot
+2. Open this URL in browser:
+
+```
+https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
+```
+
+3. Look for `"chat":{"id":12345678...}`
+
+📷 **Insert screenshot of getUpdates response (user)**  
+👉 `📸 getupdates-user.png`
+
+### 🔸 Get Group Chat ID
+
+1. Add your bot to a group
+2. Send a message in the group
+3. Then again visit:
+
+```
+https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
+```
+
+> Group IDs look like: `-100xxxxxxxxxx`
+
+📷 **Insert screenshot of getUpdates response (group)**  
+👉 `📸 getupdates-group.png`
+
+---
+
+## ⚙️ Using the Operation in Directus
+
+1. Go to **Flows > Create Flow**
+2. Select a trigger (e.g. item created)
+3. Add operation: **Send Telegram Message**
+4. Fill in:
+   - 🔐 Bot Token
+   - 🆔 Chat ID
+   - 💬 Message
+
+📷 **Insert screenshot of Directus Flow setup**
+👉 `📸 directus-flow-usage.png`
+
+---
+
+## 📤 Output
+
+**Success:**
+
+```json
+{
+  "status": "success",
+  "sent_to": "123456789",
+  "message": "Hello from Directus!"
+}
+```
+
+**Error:**
+
+```json
+{
+  "status": "error",
+  "error": "Unauthorized"
+}
+```
+
+---
+
+## 🧩 Extension Details
+
+- ID: `send-telegram-message`
+- Type: `operation`
+- Host: `api`
+- Dependencies: `axios`
+
+📁 File structure:
+
+```
+extensions/
+└── operations/
+    └── send-telegram-message/
+        ├── api.js
+        ├── app.js
+        └── package.json
+```
+
+---
+
+## 🤝 Need Help?
+
+Contact **@cryptoraichu** on:
+
+- [Twitter](https://twitter.com/cryptoraichu)
+- [Telegram](https://t.me/cryptoraichu)
+- Discord: `cryptoraichu`
+
+---
+
+Built with ❤️ by [UNCW3B Software](https://uncw3b.com)
