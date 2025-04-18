@@ -56,9 +56,7 @@ npx directus start
 ```
 123456789:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
 ```
-
-📷 **Insert screenshot of @BotFather conversation**  
-👉 `📸 botfather-create.png`
+<img width="521" alt="111" src="https://github.com/user-attachments/assets/5e0b728c-09f5-4c3e-97f7-e45edce4feef" />
 
 ---
 
