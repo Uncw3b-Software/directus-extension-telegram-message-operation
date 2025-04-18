@@ -30,7 +30,7 @@ Developed by [UNCW3B Software](https://uncw3b.com) — your partner in custom dA
 
 ```bash
 npx create-directus-extension
-# Or clone this repo into /extensions/operations/send-telegram-message
+# Or clone this repo into /extensions/send-telegram-message
 ```
 
 Make sure your `.env` includes:
