@@ -140,7 +140,7 @@ https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
 
 ```
 extensions/
-    └── send-telegram-message/
+    └── directus-extension-telegram-message-operation/
         ├── api.js
         ├── app.js
         └── package.json
